@@ -102,7 +102,23 @@ A arquitetura do projeto é composta por quatro camadas principais:
                        └─────────────────────────┘
 ```
 
-### Variáveis monitoradas
+## 🖥️ Simulação no Wokwi
+
+O circuito foi desenvolvido e validado no simulador **Wokwi** utilizando um ESP32 DevKitC V4. As imagens abaixo registram a montagem e diferentes estados observados durante os testes da simulação.
+
+### Circuito e estados de operação
+
+![Circuito completo](assets/wokwi/wokwi-01.webp)
+
+![Simulação - estado 1](assets/wokwi/wokwi-02.webp)
+
+![Simulação - estado 2](assets/wokwi/wokwi-03.webp)
+
+![Simulação - estado 3](assets/wokwi/wokwi-04.webp)
+
+As imagens complementam os testes descritos neste README e no relatório automatizado em R/Quarto.
+
+## Variáveis monitoradas
 
 #### Umidade
 
