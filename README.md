@@ -391,44 +391,43 @@ No teste 7, foram observadas as seguintes evoluções durante o ciclo:
 
 ## 📈 Resultados da análise dos logs
 
-O relatório em R/Quarto processou um conjunto de **19 logs**. Os principais indicadores observados foram:
+Na execução local mais recente utilizada para a análise, o relatório em R/Quarto processou **32 registros**.
 
 | Indicador | Resultado |
 |---|---:|
-| Umidade média | 71,59% |
-| pH médio | 4,95 |
-| Pontuação média | 3,16 |
-| N médio | 55,53% |
-| P médio | 60,11% |
-| K médio | 47,74% |
-| Decisões `IRRIGAR` | 2 |
-| Decisões `NÃO IRRIGAR` | 17 |
-| Registros sem irrigação | 89,47% |
+| Registros analisados | 32 |
+| Umidade média | 66,6% |
+| pH médio | 4,70 |
+| Pontuação média | 3,94 |
+| Média combinada N/P/K | 51,9% |
+| Decisões `IRRIGAR` | 7 |
+| Decisões `NÃO IRRIGAR` | 25 |
+| Registros sem irrigação | 78,1% |
+| Registros com bomba ativa | 7 |
 
-Os motivos registrados para as decisões incluíram chuva relevante prevista, necessidade multicritério sem chuva relevante, ausência de nutrientes ativos e pontuação abaixo do limite.
+> Os valores acima correspondem à execução local mais recente do relatório. Os arquivos de log versionados no repositório representam a evolução do projeto até o commit publicado e podem não coincidir com esse conjunto local mais recente.
 
-### Análise do ciclo mais recente
+Os motivos registrados para as decisões incluem ausência de nutrientes ativos, pontuação abaixo do limite, necessidade multicritério sem chuva relevante e bloqueio por chuva relevante prevista, conforme os cenários de teste realizados.
 
-A análise em R identifica um ciclo pela transição:
+### Análise dos ciclos de irrigação
 
-```text
-INATIVA → ATIVA → INATIVA
-```
+Na execução local mais recente foram identificados **4 ciclos completos** pela transição `INATIVA → ATIVA → INATIVA`.
 
-No conjunto analisado, foi identificado um ciclo completo. O ciclo mais recente ocorreu entre **21/09/2026 11:16:36** e **21/09/2026 11:17:08**, correspondendo a uma janela observada de **32 segundos**.
+As janelas observadas foram de aproximadamente **32 s, 56 s, 16 s e 31 s**. Esses valores representam intervalos entre registros discretos e não devem ser interpretados como o tempo físico exato de acionamento do relé.
 
-Essa janela representa o intervalo entre os registros coletados com a bomba ativa e o primeiro registro posterior com a bomba inativa. Como os logs são capturados em intervalos discretos, o valor não deve ser interpretado como o tempo físico exato de acionamento do relé.
+### Ciclo mais recente
+
+O ciclo mais recente ocorreu entre **28/09/2026 08:34:52** e **28/09/2026 08:35:23**, correspondendo a uma janela observada de **31 segundos**.
 
 | Variável | Inicial | Final |
 |---|---:|---:|
-| Umidade | 53,8% | 85,8% |
-| pH | 3,92 | 6,07 |
-| Nitrogênio | 43% | 70% |
-| Fósforo | 54% | 68% |
-| Potássio | 40% | 46% |
-| Pontuação | 7 | 2 |
+| Umidade | 47,8% | 71,8% |
+| pH | 3,57 | 5,62 |
+| Nitrogênio | 35% | 35% |
+| Fósforo | 52% | 66% |
+| Potássio | 40% | 55% |
 
-Após a evolução do ciclo, a decisão final registrada foi **`NÃO IRRIGAR`**.
+A pontuação evoluiu de **6 para 2**, fazendo com que a condição deixasse de atingir o limite de irrigação. A decisão final registrada foi **`NÃO IRRIGAR`**.
 
 ## ⚠️ Limitações
 

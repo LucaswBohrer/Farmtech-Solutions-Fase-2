@@ -108,7 +108,7 @@ Sempre que novos arquivos `.txt` forem adicionados à pasta `logs/`, basta execu
 
 ---
 
-# 1. Objetivo
+Objetivo
 
 O sistema tem como objetivo demonstrar uma estratégia de decisão para irrigação baseada na combinação de múltiplas condições do ambiente simulado.
 
@@ -130,7 +130,7 @@ A irrigação ocorre quando as condições definidas pela lógica multicritério
 
 ---
 
-# 2. Arquitetura da análise
+Arquitetura da análise
 
 O fluxo utilizado neste relatório é:
 
@@ -847,7 +847,7 @@ meteorologia_disponivel <- any(
 ::: {.callout-note}
 ## Disponibilidade dos dados
 
-`r if (meteorologia_disponivel) "Existem dados meteorológicos registrados nos logs analisados." else "Não foram encontrados dados meteorológicos registrados nos logs atuais."`
+`r if (meteorologia_disponivel) "Existem dados meteorológicos registrados nos logs analisados." else "Os logs analisados atualmente não contêm registros meteorológicos; por isso, esta seção não apresenta uma série de precipitação. A integração meteorológica foi implementada no projeto e os cenários de chuva foram validados separadamente durante os testes do sistema."`
 :::
 
 ```{r meteorologia-grafico}
@@ -898,7 +898,7 @@ if (meteorologia_disponivel) {
 }
 ```
 
-A previsão meteorológica funciona como uma camada adicional da tomada de decisão. Quando existe chuva relevante prevista, o sistema pode impedir a irrigação mesmo que os demais critérios indiquem necessidade.
+A previsão meteorológica funciona como uma camada adicional da tomada de decisão. Quando existe chuva relevante prevista, o sistema pode impedir a irrigação mesmo que os demais critérios indiquem necessidade. Nos logs atuais, entretanto, não há campos meteorológicos persistidos; portanto, não é apropriado inferir uma série histórica de precipitação a partir desses registros.
 
 # Análise dos ciclos de irrigação
 
@@ -1011,7 +1011,7 @@ if (length(ciclos) > 0) {
 }
 ```
 
-### 10.1 Resumo dos ciclos
+1 Resumo dos ciclos
 
 ```{r ciclos-resumo}
 numero_ciclos <- nrow(ciclos_df)
@@ -1128,7 +1128,7 @@ if (numero_ciclos > 0) {
 }
 ```
 
-### 11.1 Evolução durante o ciclo mais recente
+1 Evolução durante o ciclo mais recente
 
 ```{r ciclo-recente-grafico}
 if (numero_ciclos > 0) {
@@ -1191,7 +1191,7 @@ if (numero_ciclos > 0) {
 }
 ```
 
-### 11.2 Comparação inicial e final
+2 Comparação inicial e final
 
 ```{r ciclo-recente-tabela}
 if (numero_ciclos > 0) {
