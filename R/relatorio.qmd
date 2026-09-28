@@ -108,7 +108,7 @@ Sempre que novos arquivos `.txt` forem adicionados à pasta `logs/`, basta execu
 
 ---
 
-Objetivo
+# Objetivo
 
 O sistema tem como objetivo demonstrar uma estratégia de decisão para irrigação baseada na combinação de múltiplas condições do ambiente simulado.
 
@@ -130,7 +130,7 @@ A irrigação ocorre quando as condições definidas pela lógica multicritério
 
 ---
 
-Arquitetura da análise
+# Arquitetura da análise
 
 O fluxo utilizado neste relatório é:
 
@@ -1011,7 +1011,7 @@ if (length(ciclos) > 0) {
 }
 ```
 
-1 Resumo dos ciclos
+## Resumo dos ciclos
 
 ```{r ciclos-resumo}
 numero_ciclos <- nrow(ciclos_df)
@@ -1128,7 +1128,7 @@ if (numero_ciclos > 0) {
 }
 ```
 
-1 Evolução durante o ciclo mais recente
+## Evolução durante o ciclo mais recente
 
 ```{r ciclo-recente-grafico}
 if (numero_ciclos > 0) {
@@ -1191,7 +1191,7 @@ if (numero_ciclos > 0) {
 }
 ```
 
-2 Comparação inicial e final
+## Comparação inicial e final
 
 ```{r ciclo-recente-tabela}
 if (numero_ciclos > 0) {
