@@ -7,7 +7,7 @@ from datetime import datetime
 # CONFIGURACOES
 # ============================================================
 
-API_KEY = "97b7437adb4ed8245dae481262b309af"
+API_KEY = "COLOQUE_SUA_API_KEY_AQUI"
 
 CIDADE = "Novo Hamburgo"
 PAIS = "BR"
