@@ -108,13 +108,13 @@ O circuito foi desenvolvido e validado no simulador **Wokwi** utilizando um ESP3
 
 ### Circuito e estados de operação
 
-![Circuito completo](assets/wokwi/wokwi-01.webp)
+![Circuito completo](assets/wokwi/wokwi-01.png)
 
-![Simulação - estado 1](assets/wokwi/wokwi-02.webp)
+![Simulação - estado 1](assets/wokwi/wokwi-02.png)
 
-![Simulação - estado 2](assets/wokwi/wokwi-03.webp)
+![Simulação - estado 2](assets/wokwi/wokwi-03.png)
 
-![Simulação - estado 3](assets/wokwi/wokwi-04.webp)
+![Simulação - estado 3](assets/wokwi/wokwi-04.png)
 
 As imagens complementam os testes descritos neste README e no relatório automatizado em R/Quarto.
 
