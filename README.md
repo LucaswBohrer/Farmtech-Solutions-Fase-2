@@ -277,10 +277,10 @@ FarmTech_Fase2/
 ├── assets/
 │   ├── logo-fiap.png
 │   └── wokwi/
-│       ├── wokwi-01.webp
-│       ├── wokwi-02.webp
-│       ├── wokwi-03.webp
-│       └── wokwi-04.webp
+│       ├── wokwi-01.png
+│       ├── wokwi-02.png
+│       ├── wokwi-03.png
+│       └── wokwi-04.png
 ├── diagram.json
 ├── platformio.ini
 ├── wokwi.toml
